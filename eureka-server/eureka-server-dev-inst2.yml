@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    instanceId: ${spring.application.name}
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     registerWithEureka: true
     fetchRegistry: true
