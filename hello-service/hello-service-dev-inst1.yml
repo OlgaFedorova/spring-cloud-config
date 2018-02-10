@@ -1,0 +1,17 @@
+# Тестовые свойства для демонстрации работы локальных свойств
+service:
+  instance:
+    name: specific_value_prop_service1_dev
+
+# Настройки для запуска приложения
+server:
+  port: 8889
+
+eureka:
+  instance:
+    instanceId: ${spring.application.name}
+
+# Для простого обновления конфигурации через post-сервис /refresh
+management:
+  security:
+    enabled: false
