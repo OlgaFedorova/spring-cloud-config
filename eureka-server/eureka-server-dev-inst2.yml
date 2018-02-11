@@ -9,6 +9,8 @@ eureka:
     fetchRegistry: true
     healthcheck:
       enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
   server:
     renewalPercentThreshold: 0.0
     enableSelfPreservation: false
