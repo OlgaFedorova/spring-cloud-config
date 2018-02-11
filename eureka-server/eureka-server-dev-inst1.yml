@@ -5,13 +5,13 @@ eureka:
   instance:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
-    registerWithEureka: true
-    fetchRegistry: true
+    registerWithEureka: false
+    fetchRegistry: false
     healthcheck:
       enabled: true
     service-url:
       defaultZone: http://localhost:8762/eureka/
   server:
-    renewalPercentThreshold: 0.0
-    enableSelfPreservation: false
+    renewalPercentThreshold: 0.85
+    enableSelfPreservation: true
     waitTimeInMsWhenSyncEmpty: 0
