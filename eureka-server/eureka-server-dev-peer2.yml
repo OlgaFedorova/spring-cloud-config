@@ -3,8 +3,8 @@ server:
 
 eureka:
   datacenter: datacenter2
-  instance:
-    hostname: localhost
+  #instance:
+  #  hostname: localhost
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
