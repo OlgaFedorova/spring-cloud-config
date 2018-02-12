@@ -2,9 +2,10 @@ server:
   port: 8761
 
 eureka:
+  datacenter: datacenter1
   instance:
     hostname: peer1
   client:
     service-url:
-      defaultZone: http://peer2/eureka/
+      defaultZone: http://127.0.0.1:8762/eureka/
 
