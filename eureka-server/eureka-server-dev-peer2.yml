@@ -4,7 +4,7 @@ server:
 eureka:
   datacenter: datacenter2
   instance:
-    hostname: 192.168.0.101
+    hostname: peer2
   client:
     service-url:
-      defaultZone: http://192.168.0.101:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/
