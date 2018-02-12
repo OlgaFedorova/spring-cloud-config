@@ -1,0 +1,9 @@
+# Настройки для eureka-экземпляров
+eureka:
+  instance:
+      instanceId: ${spring.cloud.client.hostname}:${server.port}
+      preferIpAddress: true
+      leaseRenewalIntervalInSeconds: 30
+  client:
+    healthcheck:
+      enabled: true

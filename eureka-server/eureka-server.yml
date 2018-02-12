@@ -1,0 +1,7 @@
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+  server:
+    renewalPercentThreshold: 0.85
+    enableSelfPreservation: true
