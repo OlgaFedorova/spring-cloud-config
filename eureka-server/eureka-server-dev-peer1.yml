@@ -7,5 +7,5 @@ eureka:
   #  hostname: localhost
   client:
     service-url:
-      defaultZone: http://localhost:8762/eureka/
+      defaultZone: http://192.168.0.101:8762/eureka/
 
