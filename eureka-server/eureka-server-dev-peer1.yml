@@ -7,5 +7,5 @@ eureka:
     hostname: peer1
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8762/eureka/
+      defaultZone: http://peer2:8762/eureka/
 
