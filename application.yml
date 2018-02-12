@@ -2,7 +2,7 @@
 eureka:
   instance:
       instanceId: ${spring.cloud.client.hostname}:${server.port}
-      preferIpAddress: true
+      #preferIpAddress: true
       leaseRenewalIntervalInSeconds: 30
   client:
     healthcheck:
