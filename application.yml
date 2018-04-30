@@ -17,6 +17,12 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+ribbon:
+  eureka:
+    enabled: true
+    ReadTimeout: 20000
+    ConnectTimeout: 20000
+
 # Для простого обновления конфигурации через post-сервис /refresh
 management:
   security:
