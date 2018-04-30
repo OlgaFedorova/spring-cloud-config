@@ -12,6 +12,8 @@ eureka:
       instanceId: ${eureka.instance.appname}:${random.value}:${spring.cloud.client.hostname}:${server.port}
       leaseRenewalIntervalInSeconds: 30
   client:
+    register-with-eureka: true
+    fetch-registry: true
     healthcheck:
       enabled: true
     service-url:
