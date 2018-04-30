@@ -1,4 +1,3 @@
 eureka:
   instance:
     appname: ${services.name.feigndemo}
-    leaseRenewalIntervalInSeconds: 10

@@ -47,3 +47,5 @@ hello:
   ribbon:
     eureka:
       enabled: true
+    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+    ServerListRefreshInterval: 3000
