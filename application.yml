@@ -1,9 +1,39 @@
+# Динамический порт
+server:
+  port: 0
+
+spring:
+  main:
+    banner-mode: "off"
+
 # Настройки для eureka-экземпляров
 eureka:
   instance:
-      instanceId: ${spring.cloud.client.hostname}:${server.port}
-      #preferIpAddress: true
+      instanceId: ${spring.application.name}:${random.value}:${spring.cloud.client.hostname}:${server.port}
       leaseRenewalIntervalInSeconds: 30
   client:
     healthcheck:
       enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+# Для простого обновления конфигурации через post-сервис /refresh
+management:
+  security:
+    enabled: false
+
+######################################################
+# Список имен сервисов
+#####################################################
+services:
+  name:
+    hello: hello
+    account: account
+    feigndemo: feigndemo
+
+
+######################################################
+# Список ресурсов
+#####################################################
+  resources:
+    execute: execute
