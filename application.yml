@@ -9,7 +9,7 @@ spring:
 # Настройки для eureka-экземпляров
 eureka:
   instance:
-      instanceId: ${eureka.instance.appname}:${random.value}:${spring.cloud.client.hostname}:${server.port}
+      instanceId: ${spring.application.name}:${random.value}:${spring.cloud.client.hostname}:${server.port}
       leaseRenewalIntervalInSeconds: 10
   client:
     register-with-eureka: true
