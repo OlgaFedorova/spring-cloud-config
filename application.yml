@@ -33,7 +33,7 @@ management:
 #####################################################
 services:
   name:
-    hello: hello-service
+    hello: hello
     account: account
     feigndemo: feigndemo
 
