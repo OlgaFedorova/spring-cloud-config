@@ -10,3 +10,6 @@ eureka:
     fetchRegistry: true
     service-url:
       defaultZone: http://peer1:8761/eureka/
+  server:
+    enableSelfPreservation: true
+    renewalPercentThreshold: 0.85
