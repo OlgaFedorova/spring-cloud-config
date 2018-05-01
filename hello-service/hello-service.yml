@@ -3,6 +3,6 @@ service:
   instance:
     name: specific_value_prop_service1_default6
 
-eureka:
-  instance:
-    appname: ${services.name.hello}
+spring:
+  application:
+    name: ${services.name.hello}
