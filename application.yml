@@ -25,12 +25,6 @@ feign:
   hystrix:
     enabled: true
 
-hystrix:
-  stream:
-    maxConcurrentConnections: 10
-  config:
-    stream:
-      maxConcurrentConnections: 10
 
 #######################################################
 # Admin-сервера
@@ -38,12 +32,15 @@ hystrix:
 spring:
   boot:
     admin:
-      #url: http://localhost:8080
       turbine:
         clusters: default
         location: admin-server
       routes:
         endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti,hystrix.stream
+
+turbine:
+  clusterNameExpression: default
+  app-config: feigndemo
 
 # Для admin-сервера
 # Для простого обновления конфигурации через post-сервис /refresh
