@@ -21,18 +21,22 @@ ribbon:
   eureka:
     enabled: true
 
+feign:
+  hystrix:
+    enabled: true
+
 #######################################################
 # Admin-сервера
 #######################################################
 spring:
   boot:
     admin:
-      url: http://localhost:8080
+      #url: http://localhost:8080
       turbine:
         clusters: default
-        location: http://localhost:8080
+        location: admin-server
       routes:
-        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti,hystrix.stream,turbine.stream
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti,hystrix.stream
 
 # Для admin-сервера
 # Для простого обновления конфигурации через post-сервис /refresh
