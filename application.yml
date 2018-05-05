@@ -30,7 +30,7 @@ spring:
       url: http://localhost:8080
       turbine:
         clusters: default
-        location: turbine
+        location: http://localhost:8080
       routes:
         endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti,hystrix.stream,turbine.stream
 
