@@ -32,8 +32,8 @@ spring:
       turbine:
         clusters: default
         location: turbine
-      routes:
-        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti
+      #routes:
+      #  endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti
 
 # Для admin-сервера
 # Для простого обновления конфигурации через post-сервис /refresh
