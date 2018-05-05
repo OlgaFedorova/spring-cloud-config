@@ -25,6 +25,13 @@ feign:
   hystrix:
     enabled: true
 
+hystrix:
+  stream:
+    maxConcurrentConnections: 10
+  config:
+    stream:
+      maxConcurrentConnections: 10
+
 #######################################################
 # Admin-сервера
 #######################################################
