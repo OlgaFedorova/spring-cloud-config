@@ -17,4 +17,4 @@ spring:
 
 turbine:
   clusterNameExpression: new String("default")
-  app-config: ${services.name.feigndemo}
+  app-config-list: ${services.name.feigndemo}, ${services.name.account}
