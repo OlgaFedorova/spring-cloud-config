@@ -16,7 +16,5 @@ spring:
         endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti,hystrix.stream
 
 turbine:
-  aggregator:
-    clusterConfig: MYCLUSTER
   clusterNameExpression: new String("default")
   app-config: ${services.name.feigndemo},${services.name.account}
