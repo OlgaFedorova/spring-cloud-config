@@ -40,7 +40,7 @@ spring:
 
 turbine:
   clusterNameExpression: default
-  app-config: feigndemo
+  app-config: feigndemo,hello,account
 
 # Для admin-сервера
 # Для простого обновления конфигурации через post-сервис /refresh
