@@ -26,22 +26,6 @@ feign:
     enabled: true
 
 
-#######################################################
-# Admin-сервера
-#######################################################
-spring:
-  boot:
-    admin:
-      turbine:
-        clusters: default
-        location: admin-server
-      routes:
-        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti,hystrix.stream
-
-turbine:
-  clusterNameExpression: default
-  app-config: feigndemo,hello,account
-
 # Для admin-сервера
 # Для простого обновления конфигурации через post-сервис /refresh
 management:
