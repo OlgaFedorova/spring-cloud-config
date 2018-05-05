@@ -12,6 +12,7 @@ eureka:
       instanceId: ${spring.application.name}:${random.value}:${spring.cloud.client.hostname}:${server.port}
       leaseRenewalIntervalInSeconds: 10
   client:
+    registryFetchIntervalSeconds: 5
     register-with-eureka: true
     fetch-registry: true
     healthcheck:
@@ -23,6 +24,18 @@ ribbon:
   eureka:
     enabled: true
 
+# Адрес admin-сервера
+spring:
+  boot:
+    admin:
+      url: http://localhost:8080
+      turbine:
+        clusters: default
+        location: turbine
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti
+
+# Для admin-сервера
 # Для простого обновления конфигурации через post-сервис /refresh
 management:
   security:
