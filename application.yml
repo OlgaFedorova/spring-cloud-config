@@ -37,6 +37,7 @@ management:
 #####################################################
 services:
   name:
+    adminserver: admin-server
     hello: hello
     account: account
     feigndemo: feigndemo

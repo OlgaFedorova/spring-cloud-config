@@ -1,2 +1,20 @@
 server:
   port: 8080
+
+#######################################################
+# Admin-сервера
+#######################################################
+spring:
+  application:
+    name: ${services.name.adminserver}
+  boot:
+    admin:
+      turbine:
+        clusters: default
+        location: ${services.name.adminserver}
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,activiti,hystrix.stream
+
+turbine:
+  clusterNameExpression: new String("default")
+  app-config: ${services.name.feigndemo}
