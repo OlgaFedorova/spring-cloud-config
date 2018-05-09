@@ -39,6 +39,7 @@ services:
   name:
     adminserver: admin-server
     hello: hello
+    hellolong: hello-long
     account: account
     feigndemo: feigndemo
 
