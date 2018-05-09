@@ -21,7 +21,7 @@ ribbon:
   eureka:
     enabled: true
   ReadTimeout: 1000
-  ConnectTimeout: 2100
+  ConnectTimeout: 2500
 
 feign:
   hystrix:
