@@ -20,8 +20,8 @@ eureka:
 ribbon:
   eureka:
     enabled: true
-  ReadTimeout: 30000
-  ConnectTimeout: 30000
+  ReadTimeout: 2000
+  ConnectTimeout: 2000
 
 feign:
   hystrix:
@@ -33,7 +33,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 3000
+            timeoutInMilliseconds: 2000
 
 
 # Для admin-сервера
