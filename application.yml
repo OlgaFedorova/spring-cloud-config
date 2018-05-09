@@ -25,6 +25,14 @@ feign:
   hystrix:
     enabled: true
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+
 
 # Для admin-сервера
 # Для простого обновления конфигурации через post-сервис /refresh
